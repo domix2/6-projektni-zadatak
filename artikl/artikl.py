@@ -1,4 +1,6 @@
-class Artikl:
+from abc import ABC, abstractmethod
+
+class Artikl(ABC):
     def __init__(self, naslov, opis, cijena):
         self.__naslov = naslov
         self.__opis = opis
@@ -28,9 +30,10 @@ class Artikl:
     def cijena(self, cijena):
         self.__cijena = cijena
 
-
+    @abstractmethod
     def ispis(self):
-        print("Informacije o artiklu: ")
-        print(f"\tNaslov: {self.__naslov}")
-        print(f"\tOpis: {self.__opis}")
-        print(f"\tCijena: {self.__cijena}")
+        pass
+
+
+
+
